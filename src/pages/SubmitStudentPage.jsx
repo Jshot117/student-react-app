@@ -10,7 +10,6 @@ export const SubmitStudentPage = () => {
   // 1. add onChange handlers to each input to update the state
   // 2. add onSubmit handler to the form to submit the data
   const handleSubmit = async(e) => {
-    e.preventdefault();
     const response = await fetch(`${import.meta.env.VITE_API_URL}/students`, {
       method: 'POST',
       headers: {
