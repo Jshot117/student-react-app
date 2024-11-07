@@ -11,7 +11,7 @@ export const SubmitStudentPage = () => {
   // 2. add onSubmit handler to the form to submit the data
   const handleSubmit = async(e) => {
     e.preventdefault();
-    const response = await fetch('https://localhost:3000/students', {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/students`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
